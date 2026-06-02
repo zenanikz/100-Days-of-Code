@@ -23,7 +23,7 @@ else:
 if extra_cheese == "Y":
     pizza_total += 1
 
-print(f"Your final bill is: ${pizza_total:.2f}")
+print(f"Your final bill is: ${pizza_total}.")
 
 
 

@@ -1,3 +1,6 @@
+#PAUSE 1 - Age 45 to 55 Modifier
+#Update the code so that people age 45 to 55 (inclusive of both ages) ride for free. Use logical operators to check that the age is greater than 45, and it's also less than 55.
+
 print("Welcome to the rollercoaster!")
 height = int(input("What is your height in cm? "))
 bill = 0
@@ -11,6 +14,9 @@ if height >= 120:
     elif age <= 18:
         bill = 7
         print("Youth tickets are $7.")
+    elif 45 <= age <= 55:
+        bill = 0
+        print("Middle-Age Adult tickets are free.")
     else:
         bill = 12
         print("Adult tickets are $12.")
@@ -23,3 +29,7 @@ if height >= 120:
 
 else:
     print("Sorry, you have to grow taller before you can ride.")
+
+
+
+
