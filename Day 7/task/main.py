@@ -1,3 +1,5 @@
+import random
+
 word_list = ["aardvark", "baboon", "camel"]
 
 # TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word. Then print it.
@@ -6,3 +8,23 @@ word_list = ["aardvark", "baboon", "camel"]
 
 # TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "Right" if it
 #  is, "Wrong" if it's not.
+
+hangman_letterhead = r'''
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_  \ / _' | '_ \ / _' | '_ ' _ \ / _' | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/
+'''
+
+chosen_word = random.choice(word_list)
+
+guess = input("Guess a letter: ").lower()
+
+if guess in chosen_word:
+    print("Right")
+else:
+    print("Wrong")
