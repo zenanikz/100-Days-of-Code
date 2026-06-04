@@ -32,4 +32,4 @@ def greet_with(name, location):
 
 #PAUSE 3 - Call the greet_with() function using keyword arguments.
 
-greet_with("Zenani", "Johannesburg")
+greet_with(location = "Johannesburg", name = "Zenani")
