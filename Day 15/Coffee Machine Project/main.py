@@ -34,11 +34,17 @@ resources = {
 
  
 def report():
+    """
+    Prints the report of the resources
+    """
     print(f"Water: {resources['water']}ml\nMilk: {resources['milk']}ml\nCoffee: {resources['coffee']}g\nMoney: ${resources['money']}")
 
 
 
 def user_drink_prompt():
+    """
+    Prompting the user for their drink order
+    """
     user_drink = input("What would you like? (espresso/latte/cappuccino): ").lower()
 
     return user_drink
@@ -46,6 +52,9 @@ def user_drink_prompt():
 
 
 def sufficient_resources(user_drink):
+    """
+    Checking if there are enough resources for what the user has ordered
+    """
     u_ingredients = MENU[user_drink]["ingredients"]
     
     if resources["water"] < u_ingredients["water"]:
@@ -63,6 +72,9 @@ def sufficient_resources(user_drink):
 
 
 def process_coins(user_drink):
+    """
+    Processes the payment that the user has made
+    """
     print("Please insert coins.")
     quarters = int(input("how many quarters?: ")) * 0.25
     dimes = int(input("how many dimes?: ")) * 0.10
@@ -86,6 +98,9 @@ def process_coins(user_drink):
 
 
 def coffee_order():
+    """
+    Runs the program
+    """
     while True:
         user_drink = user_drink_prompt()
         if user_drink == "off":
